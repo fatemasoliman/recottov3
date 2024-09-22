@@ -1,0 +1,147 @@
+#recotto-drawer {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 300px;
+  height: 100%;
+  background-color: #f0f0f0;
+  transition: right 0.3s ease-in-out;
+  z-index: 9999;
+  color: black;
+}
+
+#recotto-drawer.recotto-drawer-open {
+  right: 0;
+}
+
+.recotto-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #000FFF;
+  color: white;
+}
+
+.recotto-content {
+  padding: 10px;
+  background-color: #ffffff;
+}
+
+#recotto-action-log {
+  height: 200px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  margin: 10px 0;
+  padding: 5px;
+  font-size: 12px;
+  background-color: #f8f8f8;
+  color: black;
+}
+
+#recotto-open-drawer {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #000FFF;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 9998;
+}
+
+#recotto-close {
+  background-color: transparent;
+  color: white;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+}
+
+#recotto-start-recording,
+#recotto-stop-recording,
+#recotto-save-recording,
+#recotto-replay {
+  background-color: #000FFF;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  margin: 5px 0;
+  border-radius: 3px;
+  cursor: pointer;
+  width: 100%;
+}
+
+#recotto-recording-name {
+  width: 100%;
+  padding: 5px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: white;
+  color: black;
+}
+
+#recotto-recordings {
+  width: 100%;
+  padding: 5px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: white;
+  color: black;
+}
+
+#recotto-save-form {
+  margin-top: 10px;
+}
+
+#recotto-mouse-indicator {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 10001;
+  transition: all 0.1s ease-out;
+}
+
+#recotto-replay-controls {
+  margin: 10px 0;
+}
+
+#recotto-replay-speed {
+  width: 100%;
+}
+
+.recotto-action-indicator {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  border-radius: 50%;
+  opacity: 0.5;
+  pointer-events: none;
+  z-index: 10002;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+}

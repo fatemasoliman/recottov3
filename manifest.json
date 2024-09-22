@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "RecOtto",
+  "version": "1.0",
+  "description": "Record and replay your actions on web pages",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "action": {},
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ]
+}
